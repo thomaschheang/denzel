@@ -1,5 +1,5 @@
 const Express = require("express");
-//const {queryType} = require('./query.js');
+const {queryType} = require('./query.js');
 const BodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;

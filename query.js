@@ -8,15 +8,15 @@ const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 const _=require('lodash');
 const collectionMovie=require('./movies.json');
-const uri = "mongodb+srv://thomas-chheang:azerty@thomas-cluster-uu9od.mongodb.net/test?retryWrites=true";
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const CONNECTION_URL = "mongodb+srv://thomas-chheang:azerty@thomas-cluster-uu9od.mongodb.net/test?retryWrites=true";
+const client = new MongoClient(CONNECTION_URL, { useNewUrlParser: true });
 
 const {movieType} = require('./types.js');
 let {movies} = require('./sandbox.js');
 
 var collection;
 client.connect(err => {    
-    collection = client.db("ListOfMovie").collection("Movie");
+    collection = client.db("ListOfMovies").collection("Movie");
     
 })
 
